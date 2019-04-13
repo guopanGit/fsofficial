@@ -20,7 +20,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background-color: goldenrod;
-  /*height: 900px;*/
+  /*background-color: goldenrod;*/
+  height: 900px;
 }
 </style>

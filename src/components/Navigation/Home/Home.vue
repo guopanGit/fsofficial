@@ -11,8 +11,17 @@
 </div>
     <div class="case">
       <div class="case_title">项目案例</div>
-      <div class="case_wrap">123</div>
+      <div class="case_wrap" >
+        <div class="case_item" v-for="(item, index) in caseList" @mouseover="mouseover(index)" @mouseout="mouseout(index)">
+          <div class="case_top"></div>
+          <div class="case_name">滴答小镇</div>
+          <div class="case_mark" v-show="item.isShow">
+            滴答小镇
+          </div>
+        </div>
+      </div>
     </div>
+    <div class=""></div>
   </div>
 </template>
 
@@ -41,11 +50,48 @@
           },
           loop: true,
         },
+        caseList:[
+          {
+            isShow:false
+          },
+          {
+            isShow:false
+          },
+          {
+            isShow:false
+          },
+          {
+            isShow:false
+          },
+          {
+            isShow:false
+          },
+          {
+            isShow:false
+          },
+          {
+            isShow:false
+          },
+          {
+            isShow:false
+          },
+          {
+            isShow:false
+          },
+        ]
       }
     },
     components:{
       swiper,
       swiperSlide
+    },
+    methods:{
+      mouseover(index){
+        this.$set(this.caseList[index],"isShow",true)
+      },
+      mouseout(index){
+        this.$set(this.caseList[index],"isShow",false)
+      }
     }
   }
 </script>
@@ -62,12 +108,40 @@
   }
 }
   .case{
-    padding: 50px 80px 0 80px
+    padding: 50px 180px 0 200px
     .case_title{
       font-size:40px
       font-weight 500
-      .case_wrap{
-        
+    }
+    .case_wrap{
+      height: 900px
+      padding 40px 50px
+      text-align left
+      .case_item{
+        display inline-block
+        width: 300px
+        height: 200px
+        position relative
+        margin-left 20px
+        margin-bottom 20px
+        text-align center
+        .case_top{
+          height: 150px
+          background-color black
+        }
+        .case_name{
+          height: 50px
+          line-height: 50px
+        }
+        .case_mark{
+          width: 300px
+          height: 200px
+          background-color rgba(255,35,67,.5)
+          position absolute
+          top: 0
+          z-index 2
+
+        }
       }
     }
   }

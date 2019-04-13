@@ -50,10 +50,11 @@ export default {
 <style lang="stylus" scoped >
 .home_nav{
   height: 200px
-  position: fixed
+  position: relative
   left: 0
   top: 0
   right: 0
+  margin-bottom -200px
   z-index: 99
   .nav_wrap{
     display: flex
@@ -67,11 +68,11 @@ export default {
         color: #ffffff
       }
       .native{
-        border-bottom 4px solid #fff
+        border-bottom 2px solid #fff
         padding-bottom 20px
       }
       .title:hover{
-        border-bottom 4px solid #fff
+        border-bottom 2px solid #fff
         padding-bottom 20px
       }
     }

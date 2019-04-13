@@ -6,7 +6,9 @@ import router from './router'
 import store from './store'
 
 import 'lib-flexible'
-
+Vue.use(VueBaiduMap.default, {
+  ak: 'Ym7eQ6BTYKpIvGAPzEkq0sTWFcANBaun',
+})
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
