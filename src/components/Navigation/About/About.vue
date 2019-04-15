@@ -13,17 +13,17 @@
           </div>
         </div>
         <div class="map_wrap">
-          <baidu-map v-bind:style="mapStyle" class="bm-view" ak="Ym7eQ6BTYKpIvGAPzEkq0sTWFcANBaun" :center="center" :zoom="zoom" :scroll-wheel-zoom="true">
+          <baidu-map v-bind:style="mapStyle" class="bm-view" ak="Ym7eQ6BTYKpIvGAPzEkq0sTWFcANBaun" :center="center"
+                     :zoom="zoom" :scroll-wheel-zoom="true">
             <bm-view style="width: 100%; height:600px;"></bm-view>
-            <bm-marker :position="{lng: center.lng, lat: center.lat}" :dragging="true" animation="BMAP_ANIMATION_BOUNCE">
+            <bm-marker :position="{lng: center.lng, lat: center.lat}" :dragging="true"
+                       animation="BMAP_ANIMATION_BOUNCE">
             </bm-marker>
-            <bm-local-search :keyword="keyword" :auto-viewport="true" style="width:0px;height:0px;overflow: hidden;"></bm-local-search>
+            <bm-local-search :keyword="keyword" :auto-viewport="true"
+                             style="width:0px;height:0px;overflow: hidden;"></bm-local-search>
           </baidu-map>
         </div>
       </div>
-    </div>
-    <div class="footer">
-
     </div>
   </div>
 
@@ -31,6 +31,7 @@
 
 <script>
   import {BaiduMap, BmControl, BmView, BmAutoComplete, BmLocalSearch, BmMarker} from 'vue-baidu-map'
+
   export default {
     name: "About",
     data: function () {
@@ -61,31 +62,33 @@
         }
       }
     },
-    methods: {
-
-    }
+    methods: {}
   }
 
 </script>
 
 <style scoped lang="stylus">
-  .content{
-    .About_top{
+  .content {
+    .About_top {
       height 300px
     }
-    .About_item{
-      .About_title{
+
+    .About_item {
+      .About_title {
         position relative
-        .title_name{
+
+        .title_name {
           font-size: 32px
           font-weight 400
         }
-        .icon_wrap{
+
+        .icon_wrap {
           width: 200px
           margin auto
           height: 100px
           padding-top 50px
-          .top_wrap{
+
+          .top_wrap {
             width: 60px
             height 60px
             position absolute
@@ -94,8 +97,9 @@
             transform: translateX(-50%)
             background-color white
             padding-top 15px
-            padding-left:25px
-            .icon_top{
+            padding-left: 25px
+
+            .icon_top {
               margin-left 15px
               transform: translateX(-50%) rotate(45deg)
               width: 30px
@@ -105,23 +109,20 @@
               z-index 2
             }
           }
-          .icon_bottom{
+
+          .icon_bottom {
             margin-top 20px
             height: 2px
             background-color #7e8c8d
           }
         }
       }
-      .map_wrap{
+
+      .map_wrap {
         padding 0 300px
         height 600px
         overflow hidden
       }
     }
   }
-  .footer{
-    height 400px
-    padding-top 100px
-  }
-
 </style>

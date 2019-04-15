@@ -30,15 +30,20 @@
   </div>
   </div>
     <keep-alive> <router-view></router-view> </keep-alive>
+    <Footer/>
   </div>
 </template>
 
 <script>
+  import Footer from './Footer/Footer'
 export default {
   data () {
     return {
       isNative:true
     }
+  },
+  components:{
+    Footer
   },
   methods: {
 
