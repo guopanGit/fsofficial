@@ -97,26 +97,58 @@
       <div class="scheme_title">解决方案</div>
       <div class="scheme_wrap">
         <div class="scheme_lift">
-          <div class="lift_time"></div>
+          <div class="lift_time">
+            <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=938625231,363586402&fm=26&gp=0.jpg" alt="">
+          </div>
         </div>
         <div class="scheme_right">
           <div class="item_wrap">
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
+            <div class="item">
+              <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=938625231,363586402&fm=26&gp=0.jpg" alt="">
+            </div>
+            <div class="item">
+              <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=938625231,363586402&fm=26&gp=0.jpg" alt="">
+            </div>
+            <div class="item">
+              <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=938625231,363586402&fm=26&gp=0.jpg" alt="">
+            </div>
+            <div class="item">
+              <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=938625231,363586402&fm=26&gp=0.jpg" alt="">
+            </div>
           </div>
           <div class="item_wrap">
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
+            <div class="item">
+              <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=938625231,363586402&fm=26&gp=0.jpg" alt="">
+            </div>
+            <div class="item">
+              <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=938625231,363586402&fm=26&gp=0.jpg" alt="">
+            </div>
+            <div class="item">
+              <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=938625231,363586402&fm=26&gp=0.jpg" alt="">
+            </div>
+            <div class="item">
+              <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=938625231,363586402&fm=26&gp=0.jpg" alt="">
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="join">
       <div class="join_title">参与案例</div>
+      <div class="item_wrap">
+        <div class="item" v-for="(item) in joinList">
+          <div class="item_top">{{item.num}}</div>
+          <div class="item_bottom">{{item.name}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="message">
+      <div class="message_title">行业资讯</div>
+        <div class="message_wrap">
+          <div class="message_item"></div>
+          <div class="message_item"></div>
+          <div class="message_item"></div>
+        </div>
     </div>
   </div>
 </template>
@@ -197,6 +229,29 @@
             isShow: false
           },
         ],
+        joinList:[
+          {
+            num:'10000+',
+            name:'千款移动应用开发'
+          },
+          {
+            num:'500+',
+            name:'50+移动合作伙伴'
+          },
+          {
+            num:'50+',
+            name:'服务于500+企业'
+          },
+          {
+            num:'200',
+            name:'200家开发供应商'
+          },
+          {
+            num:'10000+',
+            name:'千款移动应用开发'
+          },
+        ],
+        schemeLift: 3
       }
     },
     components: {
@@ -209,7 +264,7 @@
       },
       mouseout(index) {
         this.$set(this.caseList[index], "isShow", false)
-      }
+      },
     }
   }
 </script>
@@ -250,6 +305,7 @@
         text-align center
         border-radius 20px
         box-shadow 10px 6px 5px #888
+        overflow hidden
 
         .case_top {
           height: 195px
@@ -269,7 +325,7 @@
         }
 
         .case_mark {
-          width: 300px
+          width: 325px
           height: 255px
           background-color rgba(255, 35, 67, .5)
           border-radius 20px
@@ -286,7 +342,7 @@
             height: 110px
             line-height: 20px
             text-align left
-            padding 0 10px
+            padding 0 25px
             overflow auto
             text-overflow: ellipsis
           }
@@ -373,16 +429,25 @@
      display flex
      .scheme_lift{
        flex 1
-       height 306px
+       height 314px
        display flex
        flex-direction:column
        padding-right 10px
        .lift_time{
          width: 283px
-         height: 306px
+         height: 314px
          align-self:flex-end
          border-radius 20px
-         background-color gold
+         overflow hidden
+        img{
+          width: 283px
+          height: 314px
+          border-radius 20px
+          transition: all 1s ease 0s
+        }
+         img:hover{
+           transform scale(2)
+         }
        }
      }
      .scheme_right{
@@ -396,7 +461,16 @@
            width: 225px
            height: 150px
            border-radius 10px
-           background-color goldenrod
+           overflow hidden
+           img {
+             width: 225px
+             height: 150px
+             margin-right 10px
+             transition: all 1s ease 0s
+           }
+           img:hover{
+             transform scale(2)
+           }
          }
        }
 
@@ -404,9 +478,49 @@
    }
   }
   .join{
+    background-color goldenrod
     .join_title{
       font-size: 40px
       font-weight 500
+    }
+    .item_wrap{
+      width: 1400px
+      margin: 20px auto
+      .item{
+        width: 235px
+        height: 200px
+        display inline-block
+        margin-right 10px
+        .item_top{
+          width: 235px
+          height: 125px
+          margin  20px 0
+          line-height 120px
+          border-radius 20px
+          color: #fe4716
+          background-color white
+          font-size: 60px
+        }
+      }
+    }
+  }
+  .message{
+    .message_title{
+      font-size: 40px
+      font-weight 500
+    }
+    .message_wrap{
+      width: 1300px
+      padding 50px 0
+      margin 0 auto
+      .message_item{
+        width: 380px
+        height: 500px
+        display inline-block
+        margin-right 20px
+        background-color goldenrod
+        border-radius 10px
+      }
     }
   }
 </style>
