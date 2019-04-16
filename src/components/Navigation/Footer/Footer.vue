@@ -3,37 +3,37 @@
     <div class="footer_content">
       <div class="footer_lift">
         <div class="item_wrap">
-          <div class="">行业解决方案</div>
-          <div class="">知识付费</div>
-          <div class="">在线教育</div>
-          <div class="">在线出版</div>
+          <div class="item_a">行业解决方案</div>
+          <div class="item_b">知识付费</div>
+          <div class="item_b">在线教育</div>
+          <div class="item_b">在线出版</div>
         </div>
         <div class="item_wrap">
-          <div class="">联合分发</div>
-          <div class="">内容分销</div>
-          <div class="">广告分发</div>
+          <div class="item_a">联合分发</div>
+          <div class="item_b">内容分销</div>
+          <div class="item_b">广告分发</div>
         </div>
         <div class="item_wrap">
-          <div class="">其他产品</div>
-          <div class="">会议系统</div>
-          <div class="">企业内训</div>
+          <div class="item_a">其他产品</div>
+          <div class="item_b">会议系统</div>
+          <div class="item_b">企业内训</div>
         </div>
         <div class="item_wrap">
-          <div class="">场景解决方案</div>
-          <div class="">在线直播</div>
+          <div class="item_a">场景解决方案</div>
+          <div class="item_b">在线直播</div>
         </div>
         <div class="item_wrap">
-          <div class="">关于我们</div>
-          <div class="">公司介绍</div>
-          <div class="">加入我们</div>
-          <div class="">帮助中心</div>
-          <div class="">客户中心</div>
+          <div class="item_a">关于我们</div>
+          <div class="item_b">公司介绍</div>
+          <div class="item_b">加入我们</div>
+          <div class="item_b">帮助中心</div>
+          <div class="item_b">客户中心</div>
         </div>
         <div class="item_wrap">
           <div class="img_wrap">
             <img  src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4137065271,2738895878&fm=26&gp=0.jpg" alt="">
           </div>
-          <div class="">关于帆速</div>
+          <div class="item_b">关于帆速</div>
         </div>
       </div>
     </div>
@@ -54,10 +54,10 @@
 
 <style scoped lang="stylus">
   .footer {
-    margin-top 100px
+    margin-top 40px
     background-color rgba(0, 0, 0, .8)
     .footer_content {
-      padding 60px 300px
+      padding 40px 300px
       display flex
 
       .footer_lift {
@@ -65,15 +65,18 @@
         display flex
         .item_wrap{
           flex 1
-          div{
-            line-height: 50px
-            color white
+          color white
+          text-align left
+          .item_a{
+            margin-bottom:35px
+          }
+          .item_b{
+            line-height 40px
           }
           .img_wrap{
             img{
-              margin-top 20px
-              width: 200px
-              height auto
+              width: 160px
+              height 160px
             }
           }
         }

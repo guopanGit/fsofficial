@@ -14,10 +14,14 @@
       <div class="case_wrap">
         <div class="case_item" v-for="(item, index) in caseList" @mouseover="mouseover(index)"
              @mouseout="mouseout(index)">
-          <div class="case_top"></div>
-          <div class="case_name">滴答小镇</div>
+          <div class="case_top">
+            <img :src="item.img" :alt="item.name">
+          </div>
+          <div class="case_name">{{item.name}}</div>
           <div class="case_mark" v-show="item.isShow">
-            滴答小镇
+            <div class="intro_top">{{item.name}}</div>
+            <div class="intro_content">{{item.content}}</div>
+            <div class="intro_bottom"></div>
           </div>
         </div>
       </div>
@@ -111,6 +115,9 @@
         </div>
       </div>
     </div>
+    <div class="join">
+      <div class="join_title">参与案例</div>
+    </div>
   </div>
 </template>
 
@@ -142,33 +149,54 @@
         },
         caseList: [
           {
+            img:'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=895800172,2576710845&fm=26&gp=0.jpg',
+            name:'滴答小镇',
+            content:'1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。',
             isShow: false
           },
           {
+            img:'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=895800172,2576710845&fm=26&gp=0.jpg',
+            name:'滴答小镇',
+            content:'1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。',
             isShow: false
           },
           {
+            img:'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=895800172,2576710845&fm=26&gp=0.jpg',
+            name:'滴答小镇',
+            content:'1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。',
             isShow: false
           },
           {
+            img:'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=895800172,2576710845&fm=26&gp=0.jpg',
+            name:'滴答小镇',
+            content:'1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。',
             isShow: false
           },
           {
+            img:'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=895800172,2576710845&fm=26&gp=0.jpg',
+            name:'滴答小镇',
+            content:'1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。',
             isShow: false
           },
           {
+            img:'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=895800172,2576710845&fm=26&gp=0.jpg',
+            name:'滴答小镇',
+            content:'1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。',
             isShow: false
           },
           {
+            img:'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=895800172,2576710845&fm=26&gp=0.jpg',
+            name:'滴答小镇',
+            content:'1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。',
             isShow: false
           },
           {
+            img:'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=895800172,2576710845&fm=26&gp=0.jpg',
+            name:'滴答小镇',
+            content:'1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。',
             isShow: false
           },
-          {
-            isShow: false
-          },
-        ]
+        ],
       }
     },
     components: {
@@ -201,6 +229,7 @@
 
   .case {
     padding: 50px 180px 0 200px
+    background-color #7e8c8d
 
     .case_title {
       font-size: 40px
@@ -208,37 +237,66 @@
     }
 
     .case_wrap {
-      height: 900px
-      padding 40px 50px
+      padding 40px 50px 80px 50px
       text-align left
 
       .case_item {
         display inline-block
         width: 300px
-        height: 200px
+        height: 255px
         position relative
         margin-left 20px
-        margin-bottom 20px
+        margin-bottom 35px
         text-align center
+        border-radius 20px
+        box-shadow 10px 6px 5px #888
 
         .case_top {
-          height: 150px
-          background-color black
+          height: 195px
+          border-radius 20px 20px 0 0
+          overflow hidden
+          img{
+            width: 300px
+            height: 195px
+          }
         }
 
         .case_name {
-          height: 50px
-          line-height: 50px
+          height: 60px
+          line-height: 60px
+          background-color white
+          border-radius 0 0 20px 20px
         }
 
         .case_mark {
           width: 300px
-          height: 200px
+          height: 255px
           background-color rgba(255, 35, 67, .5)
+          border-radius 20px
           position absolute
           top: 0
           z-index 2
+          .intro_top{
+            line-height: 50px
+            font-weight 500
+            margin-top 20px
+          }
 
+          .intro_content{
+            height: 110px
+            line-height: 20px
+            text-align left
+            padding 0 10px
+            overflow auto
+            text-overflow: ellipsis
+          }
+          .intro_bottom{
+            width: 50px
+            height: 50px
+            background-color goldenrod
+            margin 10px auto
+            cursor pointer
+          }
         }
       }
     }
@@ -251,20 +309,21 @@
     }
 
     .service-wrap {
+      height: 518px
       padding 40px 0
       .item_wrap{
         display flex
         justify-content:center
         .item {
-          width: 150px
+          width: 190px
           height: 300px
           margin-right 30px
-          padding-top 20px
+          padding-top 80px
           border-radius 10px
           position relative
           .item_top{
-            width: 150px
-            height: 170px
+            width: 190px
+            height: 245px
             position relative
             background-color red
             border-radius 10px
@@ -299,7 +358,7 @@
 
         }
         .uneven{
-          margin-top: 40px
+          margin-top: 90px
         }
       }
     }
@@ -310,34 +369,32 @@
      font-weight 500
    }
    .scheme_wrap{
-     margin 0 auto
-     padding 20px 0
-     width: 1200px
+     padding 20px 300px
      display flex
      .scheme_lift{
        flex 1
-       height 260px
+       height 306px
        display flex
        flex-direction:column
        padding-right 10px
        .lift_time{
-         width: 200px
-         height: 260px
+         width: 283px
+         height: 306px
          align-self:flex-end
          border-radius 20px
          background-color gold
        }
      }
      .scheme_right{
-       flex 4
+       flex 10
        .item_wrap{
          text-align left
          .item{
            display inline-block
            margin-right 10px
            margin-bottom 10px
-           width: 200px
-           height: 126px
+           width: 225px
+           height: 150px
            border-radius 10px
            background-color goldenrod
          }
@@ -345,5 +402,11 @@
 
      }
    }
+  }
+  .join{
+    .join_title{
+      font-size: 40px
+      font-weight 500
+    }
   }
 </style>
