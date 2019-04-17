@@ -98,36 +98,45 @@
       <div class="scheme_wrap">
         <div class="scheme_lift">
           <div class="lift_time">
-            <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=938625231,363586402&fm=26&gp=0.jpg" alt="">
+            <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=938625231,363586402&fm=26&gp=0.jpg"
+                 alt="">
           </div>
         </div>
         <div class="scheme_right">
           <div class="item_wrap">
             <div class="item">
-              <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=938625231,363586402&fm=26&gp=0.jpg" alt="">
+              <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=938625231,363586402&fm=26&gp=0.jpg"
+                   alt="">
             </div>
             <div class="item">
-              <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=938625231,363586402&fm=26&gp=0.jpg" alt="">
+              <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=938625231,363586402&fm=26&gp=0.jpg"
+                   alt="">
             </div>
             <div class="item">
-              <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=938625231,363586402&fm=26&gp=0.jpg" alt="">
+              <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=938625231,363586402&fm=26&gp=0.jpg"
+                   alt="">
             </div>
             <div class="item">
-              <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=938625231,363586402&fm=26&gp=0.jpg" alt="">
+              <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=938625231,363586402&fm=26&gp=0.jpg"
+                   alt="">
             </div>
           </div>
           <div class="item_wrap">
             <div class="item">
-              <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=938625231,363586402&fm=26&gp=0.jpg" alt="">
+              <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=938625231,363586402&fm=26&gp=0.jpg"
+                   alt="">
             </div>
             <div class="item">
-              <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=938625231,363586402&fm=26&gp=0.jpg" alt="">
+              <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=938625231,363586402&fm=26&gp=0.jpg"
+                   alt="">
             </div>
             <div class="item">
-              <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=938625231,363586402&fm=26&gp=0.jpg" alt="">
+              <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=938625231,363586402&fm=26&gp=0.jpg"
+                   alt="">
             </div>
             <div class="item">
-              <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=938625231,363586402&fm=26&gp=0.jpg" alt="">
+              <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=938625231,363586402&fm=26&gp=0.jpg"
+                   alt="">
             </div>
           </div>
         </div>
@@ -144,11 +153,42 @@
     </div>
     <div class="message">
       <div class="message_title">行业资讯</div>
-        <div class="message_wrap">
-          <div class="message_item"></div>
-          <div class="message_item"></div>
-          <div class="message_item"></div>
+      <div class="message_wrap">
+        <div class="message_item"></div>
+        <div class="message_item"></div>
+        <div class="message_item"></div>
+      </div>
+    </div>
+    <div class="demand">
+      <div class="demand_wrap">
+        <div class="demand_title">在一切开始之前，先说说您的需求吧</div>
+        <div class="demand_contact">
+          <div class="contact">
+            <div class="name">
+              <span>您的姓名：</span>
+              <input type="text" placeholder="请输入姓名" v-model="name">
+            </div>
+            <div class="phone">
+              <span>联系电话：</span>
+              <input type="text" placeholder="请输入姓名" v-model="phone">
+            </div>
+          </div>
+          <div class="textarea">
+            <div>您的需求：</div>
+            <textarea name="demand" class="text_content" draggable="true"></textarea>
+          </div>
+          <div class="footer">
+            <div class="verification_wrap">
+              <span>验证码：</span>
+              <input type="text" placeholder="请输入验证码" v-model="verification">
+            </div>
+            <div class="verification">
+              <div class="code" @click="change" v-for=" item in code">{{item}}</div>
+            </div>
+            <div class="submit">提交</div>
+          </div>
         </div>
+      </div>
     </div>
   </div>
 </template>
@@ -181,77 +221,80 @@
         },
         caseList: [
           {
-            img:'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=895800172,2576710845&fm=26&gp=0.jpg',
-            name:'滴答小镇',
-            content:'1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。',
+            img: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=895800172,2576710845&fm=26&gp=0.jpg',
+            name: '滴答小镇',
+            content: '1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。',
             isShow: false
           },
           {
-            img:'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=895800172,2576710845&fm=26&gp=0.jpg',
-            name:'滴答小镇',
-            content:'1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。',
+            img: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=895800172,2576710845&fm=26&gp=0.jpg',
+            name: '滴答小镇',
+            content: '1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。',
             isShow: false
           },
           {
-            img:'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=895800172,2576710845&fm=26&gp=0.jpg',
-            name:'滴答小镇',
-            content:'1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。',
+            img: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=895800172,2576710845&fm=26&gp=0.jpg',
+            name: '滴答小镇',
+            content: '1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。',
             isShow: false
           },
           {
-            img:'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=895800172,2576710845&fm=26&gp=0.jpg',
-            name:'滴答小镇',
-            content:'1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。',
+            img: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=895800172,2576710845&fm=26&gp=0.jpg',
+            name: '滴答小镇',
+            content: '1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。',
             isShow: false
           },
           {
-            img:'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=895800172,2576710845&fm=26&gp=0.jpg',
-            name:'滴答小镇',
-            content:'1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。',
+            img: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=895800172,2576710845&fm=26&gp=0.jpg',
+            name: '滴答小镇',
+            content: '1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。',
             isShow: false
           },
           {
-            img:'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=895800172,2576710845&fm=26&gp=0.jpg',
-            name:'滴答小镇',
-            content:'1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。',
+            img: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=895800172,2576710845&fm=26&gp=0.jpg',
+            name: '滴答小镇',
+            content: '1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。',
             isShow: false
           },
           {
-            img:'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=895800172,2576710845&fm=26&gp=0.jpg',
-            name:'滴答小镇',
-            content:'1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。',
+            img: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=895800172,2576710845&fm=26&gp=0.jpg',
+            name: '滴答小镇',
+            content: '1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。',
             isShow: false
           },
           {
-            img:'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=895800172,2576710845&fm=26&gp=0.jpg',
-            name:'滴答小镇',
-            content:'1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。',
+            img: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=895800172,2576710845&fm=26&gp=0.jpg',
+            name: '滴答小镇',
+            content: '1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。',
             isShow: false
           },
         ],
-        joinList:[
+        joinList: [
           {
-            num:'10000+',
-            name:'千款移动应用开发'
+            num: '10000+',
+            name: '千款移动应用开发'
           },
           {
-            num:'500+',
-            name:'50+移动合作伙伴'
+            num: '500+',
+            name: '50+移动合作伙伴'
           },
           {
-            num:'50+',
-            name:'服务于500+企业'
+            num: '50+',
+            name: '服务于500+企业'
           },
           {
-            num:'200',
-            name:'200家开发供应商'
+            num: '200',
+            name: '200家开发供应商'
           },
           {
-            num:'10000+',
-            name:'千款移动应用开发'
+            num: '10000+',
+            name: '千款移动应用开发'
           },
         ],
-        schemeLift: 3
+        code: [2, 4, 5, 5],
+        name: '',
+        phone: '',
+        verification: ''
       }
     },
     components: {
@@ -265,6 +308,15 @@
       mouseout(index) {
         this.$set(this.caseList[index], "isShow", false)
       },
+      change() {
+        let arr = []
+        for (let i = 0; i < 4; i++) {
+          let a = Math.random() * 9
+          a = Math.round(a)
+          arr.push(a)
+        }
+        this.code = arr
+      }
     }
   }
 </script>
@@ -311,7 +363,8 @@
           height: 195px
           border-radius 20px 20px 0 0
           overflow hidden
-          img{
+
+          img {
             width: 300px
             height: 195px
           }
@@ -332,13 +385,14 @@
           position absolute
           top: 0
           z-index 2
-          .intro_top{
+
+          .intro_top {
             line-height: 50px
             font-weight 500
             margin-top 20px
           }
 
-          .intro_content{
+          .intro_content {
             height: 110px
             line-height: 20px
             text-align left
@@ -346,7 +400,8 @@
             overflow auto
             text-overflow: ellipsis
           }
-          .intro_bottom{
+
+          .intro_bottom {
             width: 50px
             height: 50px
             background-color goldenrod
@@ -367,9 +422,11 @@
     .service-wrap {
       height: 518px
       padding 40px 0
-      .item_wrap{
+
+      .item_wrap {
         display flex
-        justify-content:center
+        justify-content: center
+
         .item {
           width: 190px
           height: 300px
@@ -377,13 +434,15 @@
           padding-top 80px
           border-radius 10px
           position relative
-          .item_top{
+
+          .item_top {
             width: 190px
             height: 245px
             position relative
             background-color red
             border-radius 10px
-            .corner{
+
+            .corner {
               width: 10px
               height: 10px
               background-color: red
@@ -393,16 +452,19 @@
               left 50%
             }
           }
-          .bottom_wrap{
+
+          .bottom_wrap {
             padding-top: 20px
-            .item_bottom{
+
+            .item_bottom {
               width: 23px
               height: 20px
               margin 0 auto
               background-color #7e8c8d
               border-radius 50%
               padding-top 3px
-              .bottom_inside{
+
+              .bottom_inside {
                 width: 16px
                 height: 16px
                 background-color red
@@ -413,88 +475,105 @@
           }
 
         }
-        .uneven{
+
+        .uneven {
           margin-top: 90px
         }
       }
     }
   }
-  .scheme{
-   .scheme_title{
-     font-size: 40px
-     font-weight 500
-   }
-   .scheme_wrap{
-     padding 20px 300px
-     display flex
-     .scheme_lift{
-       flex 1
-       height 314px
-       display flex
-       flex-direction:column
-       padding-right 10px
-       .lift_time{
-         width: 283px
-         height: 314px
-         align-self:flex-end
-         border-radius 20px
-         overflow hidden
-        img{
-          width: 283px
-          height: 314px
-          border-radius 20px
-          transition: all 1s ease 0s
-        }
-         img:hover{
-           transform scale(2)
-         }
-       }
-     }
-     .scheme_right{
-       flex 10
-       .item_wrap{
-         text-align left
-         .item{
-           display inline-block
-           margin-right 10px
-           margin-bottom 10px
-           width: 225px
-           height: 150px
-           border-radius 10px
-           overflow hidden
-           img {
-             width: 225px
-             height: 150px
-             margin-right 10px
-             transition: all 1s ease 0s
-           }
-           img:hover{
-             transform scale(2)
-           }
-         }
-       }
 
-     }
-   }
-  }
-  .join{
-    background-color goldenrod
-    .join_title{
+  .scheme {
+    .scheme_title {
       font-size: 40px
       font-weight 500
     }
-    .item_wrap{
+
+    .scheme_wrap {
+      padding 20px 300px
+      display flex
+
+      .scheme_lift {
+        flex 1
+        height 314px
+        display flex
+        flex-direction: column
+        padding-right 10px
+
+        .lift_time {
+          width: 283px
+          height: 314px
+          align-self: flex-end
+          border-radius 20px
+          overflow hidden
+
+          img {
+            width: 283px
+            height: 314px
+            border-radius 20px
+            transition: all 1s ease 0s
+          }
+
+          img:hover {
+            transform scale(2)
+          }
+        }
+      }
+
+      .scheme_right {
+        flex 10
+
+        .item_wrap {
+          text-align left
+
+          .item {
+            display inline-block
+            margin-right 10px
+            margin-bottom 10px
+            width: 225px
+            height: 150px
+            border-radius 10px
+            overflow hidden
+
+            img {
+              width: 225px
+              height: 150px
+              margin-right 10px
+              transition: all 1s ease 0s
+            }
+
+            img:hover {
+              transform scale(2)
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  .join {
+    background-color goldenrod
+
+    .join_title {
+      font-size: 40px
+      font-weight 500
+    }
+
+    .item_wrap {
       width: 1400px
       margin: 20px auto
-      .item{
+
+      .item {
         width: 235px
         height: 200px
         display inline-block
         margin-right 10px
-        .item_top{
+
+        .item_top {
           width: 235px
           height: 125px
-          margin  20px 0
+          margin 20px 0
           line-height 120px
           border-radius 20px
           color: #fe4716
@@ -504,16 +583,19 @@
       }
     }
   }
-  .message{
-    .message_title{
+
+  .message {
+    .message_title {
       font-size: 40px
       font-weight 500
     }
-    .message_wrap{
-      width: 1300px
+
+    .message_wrap {
+      width: 1800px
       padding 50px 0
       margin 0 auto
-      .message_item{
+
+      .message_item {
         width: 380px
         height: 500px
         display inline-block
@@ -522,5 +604,141 @@
         border-radius 10px
       }
     }
+  }
+
+  .demand {
+    padding 10px 200px
+
+    .demand_title {
+      font-size: 40px
+      font-weight 500
+    }
+
+    .demand_contact {
+      text-align left
+
+      .contact {
+        & div {
+          display inline-block
+        }
+
+        .name {
+          margin-top 20px
+          margin-right 80px
+
+          & input {
+            width: 450px
+            height: 60px
+            outline: none
+            font-size: 20px
+            border 1px solid #7e8c8d
+            border-radius 10px
+            padding-left 10px
+          }
+        }
+
+        .phone {
+          margin-top 20px
+
+          & input {
+            width: 450px
+            height: 60px
+            outline: none
+            font-size: 20px
+            border 1px solid #7e8c8d
+            border-radius 10px
+            padding-left 10px
+          }
+        }
+      }
+
+      .textarea {
+        margin-top 20px
+        text-align top
+        position relative
+
+        div {
+          display inline-block
+          position absolute
+          top: 10px
+          left 0
+        }
+
+        .text_content {
+          width: 1098px
+          height: 215px
+          margin-left 80px
+          border-radius 10px
+          outline: none
+          padding 5px
+        }
+      }
+
+      .footer {
+        .verification_wrap {
+          display inline-block
+          margin-top: 20px
+
+          input {
+            width: 380px
+            height: 60px
+            padding 0 10px
+            margin-right 20px
+            border 1px solid #7e8c8d
+            border-radius 10px
+            outline: none
+          }
+        }
+
+        .verification {
+          display inline-block
+          width: 180px
+          height: 60px
+          color #fff
+          cursor pointer
+          background-color red
+          border-radius 10px
+          margin-right 155px
+          margin-left 20px
+          line-height: 60px
+          font-size: 26px
+
+          .code {
+            margin 0 14px
+            display inline-block
+          }
+
+          .code:nth-child(1) {
+            transform: rotate(-53deg)
+          }
+
+          .code:nth-child(2) {
+            transform: rotate(45deg)
+          }
+
+          .code:nth-child(3) {
+            transform: rotate(-25deg)
+          }
+
+          .code:nth-child(4) {
+            transform: rotate(72deg)
+          }
+        }
+
+        .submit {
+          display inline-block
+          width: 220px
+          height: 60px
+          color #fff
+          background-color red
+          border-radius 10px
+          line-height: 60px
+          font-size: 30px
+          text-align center
+        }
+      }
+
+    }
+
   }
 </style>
