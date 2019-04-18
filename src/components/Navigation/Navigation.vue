@@ -2,9 +2,11 @@
   <div>
     <div class="home_nav">
       <div class="nav_wrap">
-        <div class="">1</div>
+        <div class="logo_wrap">
+          <img class="logo" src="./images/logo.png" alt="logo">
+        </div>
         <div>
-          <router-link :class="{ native:this.$route.path === '/Home'}" to='Home' class="title">首页</router-link>
+          <router-link :class="{native:this.$route.path === '/Home'}" to='Home' class="title">首页</router-link>
         </div>
         <div>
           <router-link :class="this.$route.path === '/Retail' ? 'native': ''" to='Retail' class="title">新零售S2B2C
@@ -74,6 +76,7 @@
         flex: 1
         height: 100px
         line-height: 100px
+        margin-top: 41px
         cursor: pointer
 
         a {
@@ -90,6 +93,17 @@
           color: red
           border-bottom 2px solid red
           padding-bottom 20px
+        }
+      }
+
+      .logo_wrap {
+        margin-top: 61px
+        width: 140px
+        height: auto
+
+        .logo {
+          width: 140px
+          height: auto
         }
       }
     }

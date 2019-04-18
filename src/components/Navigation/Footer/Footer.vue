@@ -31,7 +31,7 @@
         </div>
         <div class="item_wrap">
           <div class="img_wrap">
-            <img  src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4137065271,2738895878&fm=26&gp=0.jpg" alt="">
+            <img  src="./images/dimension.png" alt="">
           </div>
           <div class="item_b">关于帆速</div>
         </div>
@@ -74,6 +74,8 @@
             line-height 40px
           }
           .img_wrap{
+            width: 160px
+            height 160px
             img{
               width: 160px
               height 160px

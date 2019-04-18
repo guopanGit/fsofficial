@@ -3,19 +3,21 @@
     <div class="swiper_wrap">
       <swiper :options="swiperOption">
         <swiper-slide class="img_wrap" v-for="(item, index) in swiperImg" :key="index">
-          <img :src="item" alt="">
+          <img :src="item.img" alt="">
         </swiper-slide>
         <!-- Optional controls -->
         <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
     </div>
     <div class="case">
-      <div class="case_title">项目案例</div>
+      <div class="case_title">
+        <img src="./images/case.png" alt="项目案例">
+      </div>
       <div class="case_wrap">
         <div class="case_item" v-for="(item, index) in caseList" @mouseover="mouseover(index)"
              @mouseout="mouseout(index)">
           <div class="case_top">
-            <img :src="item.img" :alt="item.name">
+            <img v-lazy="item.img" :alt="item.name">
           </div>
           <div class="case_name">{{item.name}}</div>
           <div class="case_mark" v-show="item.isShow">
@@ -27,11 +29,17 @@
       </div>
     </div>
     <div class="service">
-      <div class="service-title">我们的服务</div>
+      <div class="service-title">
+        <img src="./images/service.png" alt="我们的服务">
+      </div>
       <div class="service-wrap">
         <div class="item_wrap">
           <div class="item uneven">
             <div class="item_top">
+              <div class="top_a1"></div>
+              <div class="top_b">战略咨询</div>
+              <div class="top_c">多种主流付费形式</div>
+              <div class="top_d">满足不同学习需求</div>
               <div class="corner"></div>
             </div>
             <div class="bottom_wrap">
@@ -42,6 +50,10 @@
           </div>
           <div class="item">
             <div class="item_top">
+              <div class="top_a2"></div>
+              <div class="top_b">战略咨询</div>
+              <div class="top_c">多种主流付费形式</div>
+              <div class="top_d">满足不同学习需求</div>
               <div class="corner"></div>
             </div>
             <div class="bottom_wrap">
@@ -52,6 +64,10 @@
           </div>
           <div class="item uneven">
             <div class="item_top">
+              <div class="top_a3"></div>
+              <div class="top_b">战略咨询</div>
+              <div class="top_c">多种主流付费形式</div>
+              <div class="top_d">满足不同学习需求</div>
               <div class="corner"></div>
             </div>
             <div class="bottom_wrap">
@@ -62,6 +78,10 @@
           </div>
           <div class="item">
             <div class="item_top">
+              <div class="top_a4"></div>
+              <div class="top_b">战略咨询</div>
+              <div class="top_c">多种主流付费形式</div>
+              <div class="top_d">满足不同学习需求</div>
               <div class="corner"></div>
             </div>
             <div class="bottom_wrap">
@@ -72,6 +92,10 @@
           </div>
           <div class="item uneven">
             <div class="item_top">
+              <div class="top_a5"></div>
+              <div class="top_b">战略咨询</div>
+              <div class="top_c">多种主流付费形式</div>
+              <div class="top_d">满足不同学习需求</div>
               <div class="corner"></div>
             </div>
             <div class="bottom_wrap">
@@ -82,6 +106,10 @@
           </div>
           <div class="item">
             <div class="item_top">
+              <div class="top_a6"></div>
+              <div class="top_b">战略咨询</div>
+              <div class="top_c">多种主流付费形式</div>
+              <div class="top_d">满足不同学习需求</div>
               <div class="corner"></div>
             </div>
             <div class="bottom_wrap">
@@ -94,7 +122,9 @@
       </div>
     </div>
     <div class="scheme">
-      <div class="scheme_title">解决方案</div>
+      <div class="scheme_title">
+        <img src="./images/scheme.png" alt="解决方案">
+      </div>
       <div class="scheme_wrap">
         <div class="scheme_lift">
           <div class="lift_time">
@@ -143,7 +173,9 @@
       </div>
     </div>
     <div class="join">
-      <div class="join_title">参与案例</div>
+      <div class="join_title">
+        <img src="./images/join.png" alt="参与案例">
+      </div>
       <div class="item_wrap">
         <div class="item" v-for="(item) in joinList">
           <div class="item_top">{{item.num}}</div>
@@ -152,11 +184,108 @@
       </div>
     </div>
     <div class="message">
-      <div class="message_title">行业资讯</div>
+      <div class="message_title">
+        <img src="./images/message.png" alt="行业资讯"></div>
       <div class="message_wrap">
-        <div class="message_item"></div>
-        <div class="message_item"></div>
-        <div class="message_item"></div>
+        <div class="message_item">
+          <div class="item_img">
+            <img src="./images/message_item.png" alt="">
+          </div>
+          <div class="text_wrap border0">
+            <div class="text_title">
+              <div class="text_name">VR让你身临其境体验</div>
+              <div class="text_date">2019-4-18</div>
+            </div>
+            <div class="text_bottom">微信、支付宝两家第三方平台</div>
+          </div>
+          <div class="text_wrap">
+            <div class="text_title">
+              <div class="text_name">VR让你身临其境体验</div>
+              <div class="text_date">2019-4-18</div>
+            </div>
+            <div class="text_bottom">微信、支付宝两家第三方平台</div>
+          </div>
+          <div class="text_wrap">
+            <div class="text_title">
+              <div class="text_name">VR让你身临其境体验</div>
+              <div class="text_date">2019-4-18</div>
+            </div>
+            <div class="text_bottom">微信、支付宝两家第三方平台</div>
+          </div>
+          <div class="text_wrap">
+            <div class="text_title">
+              <div class="text_name">VR让你身临其境体验</div>
+              <div class="text_date">2019-4-18</div>
+            </div>
+            <div class="text_bottom">微信、支付宝两家第三方平台</div>
+          </div>
+        </div>
+        <div class="message_item">
+          <div class="item_img">
+            <img src="./images/message_item.png" alt="">
+          </div>
+          <div class="text_wrap border0">
+            <div class="text_title">
+              <div class="text_name">VR让你身临其境体验</div>
+              <div class="text_date">2019-4-18</div>
+            </div>
+            <div class="text_bottom">微信、支付宝两家第三方平台</div>
+          </div>
+          <div class="text_wrap">
+            <div class="text_title">
+              <div class="text_name">VR让你身临其境体验</div>
+              <div class="text_date">2019-4-18</div>
+            </div>
+            <div class="text_bottom">微信、支付宝两家第三方平台</div>
+          </div>
+          <div class="text_wrap">
+            <div class="text_title">
+              <div class="text_name">VR让你身临其境体验</div>
+              <div class="text_date">2019-4-18</div>
+            </div>
+            <div class="text_bottom">微信、支付宝两家第三方平台</div>
+          </div>
+          <div class="text_wrap">
+            <div class="text_title">
+              <div class="text_name">VR让你身临其境体验</div>
+              <div class="text_date">2019-4-18</div>
+            </div>
+            <div class="text_bottom">微信、支付宝两家第三方平台</div>
+          </div>
+        </div>
+        <div class="message_item">
+          <div class="item_img">
+            <img src="./images/message_item.png" alt="">
+          </div>
+          <div class="text_wrap border0">
+            <div class="text_title">
+              <div class="text_name">VR让你身临其境体验</div>
+              <div class="text_date">2019-4-18</div>
+            </div>
+            <div class="text_bottom">微信、支付宝两家第三方平台</div>
+          </div>
+          <div class="text_wrap">
+            <div class="text_title">
+              <div class="text_name">VR让你身临其境体验</div>
+              <div class="text_date">2019-4-18</div>
+            </div>
+            <div class="text_bottom">微信、支付宝两家第三方平台</div>
+          </div>
+          <div class="text_wrap">
+            <div class="text_title">
+              <div class="text_name">VR让你身临其境体验</div>
+              <div class="text_date">2019-4-18</div>
+            </div>
+            <div class="text_bottom">微信、支付宝两家第三方平台</div>
+          </div>
+          <div class="text_wrap">
+            <div class="text_title">
+              <div class="text_name">VR让你身临其境体验</div>
+              <div class="text_date">2019-4-18</div>
+            </div>
+            <div class="text_bottom">微信、支付宝两家第三方平台</div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="demand">
@@ -182,8 +311,8 @@
               <span>验证码：</span>
               <input type="text" placeholder="请输入验证码" v-model="verification">
             </div>
-            <div class="verification">
-              <div class="code" @click="change" v-for=" item in code">{{item}}</div>
+            <div class="verification" @click="change" >
+              <div class="code" v-for=" item in code">{{item}}</div>
             </div>
             <div class="submit">提交</div>
           </div>
@@ -202,10 +331,22 @@
     data() {
       return {
         swiperImg: [
-          'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1555130361480&di=f568dbfca2e145409ad5503d26d9cf62&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fblog%2F201511%2F30%2F20151130190150_T5A3i.jpeg',
-          'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1555726149&di=0955e618c286bca3b0e4561b0f839cc9&imgtype=jpg&er=1&src=http%3A%2F%2Fgss0.baidu.com%2F94o3dSag_xI4khGko9WTAnF6hhy%2Fzhidao%2Fpic%2Fitem%2F024f78f0f736afc321789432b119ebc4b7451274.jpg',
-          'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1555131500209&di=fab97edc435f2aeddc779f92df523a78&imgtype=0&src=http%3A%2F%2Fimg.lelezone.com%2Fthumb%2Fp%2Fallimg%2F150520%2F1-150520120T4.jpg',
-          'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1555131522775&di=82294c7f950871484abb9e655acf8570&imgtype=0&src=http%3A%2F%2Fimg.lelezone.com%2Fthumb%2Fp%2Fallimg%2F150520%2F1-150520120T3.jpg'
+          {
+            img: require('./images/slideshow.png'),
+          },
+          {
+            img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1555130361480&di=f568dbfca2e145409ad5503d26d9cf62&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fblog%2F201511%2F30%2F20151130190150_T5A3i.jpeg'
+          },
+          {
+            img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1555130361480&di=f568dbfca2e145409ad5503d26d9cf62&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fblog%2F201511%2F30%2F20151130190150_T5A3i.jpeg'
+          },
+          {
+            img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1555131500209&di=fab97edc435f2aeddc779f92df523a78&imgtype=0&src=http%3A%2F%2Fimg.lelezone.com%2Fthumb%2Fp%2Fallimg%2F150520%2F1-150520120T4.jpg'
+          },
+
+          {
+            img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1555131522775&di=82294c7f950871484abb9e655acf8570&imgtype=0&src=http%3A%2F%2Fimg.lelezone.com%2Fthumb%2Fp%2Fallimg%2F150520%2F1-150520120T3.jpg'
+          },
         ],
         swiperOption: {
           pagination: {
@@ -324,63 +465,72 @@
 <style scoped lang="stylus">
   .swiper_wrap {
     .img_wrap {
-      height: 800px;
+      height: 708px;
       overflow: hidden;
 
       img {
         width: 100%
-        height: 800px;
+        height: 708px;
       }
     }
   }
 
   .case {
-    padding: 50px 180px 0 200px
-    background-color #7e8c8d
+    padding: 70px 180px 0 200px
+    background-color rgba(245, 245, 245, 1)
 
     .case_title {
-      font-size: 40px
-      font-weight 500
+      width: 471px
+      height: 84px
+      margin 0 auto
+
+      img {
+        width: 471px
+        height: 84px
+      }
     }
 
     .case_wrap {
-      padding 40px 50px 80px 50px
+      padding 40px 360px 80px 360px
       text-align left
 
       .case_item {
         display inline-block
-        width: 300px
-        height: 255px
+        width: 298px
+        height: 254px
         position relative
         margin-left 20px
         margin-bottom 35px
         text-align center
-        border-radius 20px
-        box-shadow 10px 6px 5px #888
+        border-radius 4px
+        box-shadow 10px 6px 5px rgba(230, 230, 230, 1)
         overflow hidden
 
         .case_top {
-          height: 195px
-          border-radius 20px 20px 0 0
+          height: 199px
           overflow hidden
 
           img {
             width: 300px
-            height: 195px
+            height: 196px
           }
         }
 
         .case_name {
           height: 60px
           line-height: 60px
+          font-size: 24px
+          font-weight: 400
           background-color white
-          border-radius 0 0 20px 20px
         }
 
         .case_mark {
           width: 325px
           height: 255px
-          background-color rgba(255, 35, 67, .5)
+          background-color rgba(10, 8, 23, .3)
+          color #fff
+          font-size: 13px
+          font-weight bold
           border-radius 20px
           position absolute
           top: 0
@@ -402,10 +552,12 @@
           }
 
           .intro_bottom {
-            width: 50px
-            height: 50px
-            background-color goldenrod
-            margin 10px auto
+            width: 32px
+            height: 32px
+            background url("./images/go.png") no-repeat
+            background-size 32px 32px
+            padding-right: 20px
+            margin 20px auto
             cursor pointer
           }
         }
@@ -414,9 +566,18 @@
   }
 
   .service {
+    background-color #7e8c8d
+    padding-top: 69px
+
     .service-title {
-      font-size: 40px
-      font-weight 500
+      width: 620px
+      height: 86px
+      margin 0 auto
+
+      img {
+        width: 620px
+        height: 86px
+      }
     }
 
     .service-wrap {
@@ -428,27 +589,87 @@
         justify-content: center
 
         .item {
-          width: 190px
-          height: 300px
+          width: 220px
+          height: 245px
           margin-right 30px
           padding-top 80px
           border-radius 10px
           position relative
 
           .item_top {
-            width: 190px
+            width: 220px
             height: 245px
+            padding-top: 40px
             position relative
-            background-color red
+            background-color #ffffff
             border-radius 10px
+            .top_a1{
+              width: 64px
+              height: 64px
+              margin: 0 auto
+              background url("./images/consult.png")no-repeat
+              background-size 64px 64px
+            }
+            .top_a2{
+              width: 64px
+              height: 64px
+              margin: 0 auto
+              background url("./images/design.png")no-repeat
+              background-size 64px 64px
+            }
 
+            .top_a3{
+              width: 64px
+              height: 64px
+              margin: 0 auto
+              background url("./images/research.png")no-repeat
+              background-size 64px 64px
+            }
+
+            .top_a4{
+              width: 64px
+              height: 64px
+              margin: 0 auto
+              background url("./images/operation.png")no-repeat
+              background-size 64px 64px
+            }
+
+            .top_a5{
+              width: 64px
+              height: 64px
+              margin: 0 auto
+              background url("./images/generalize.png")no-repeat
+              background-size 64px 64px
+            }
+
+            .top_a6{
+              width: 64px
+              height: 64px
+              margin: 0 auto
+              background url("./images/outsourcing.png")no-repeat
+              background-size 64px 64px
+            }
+
+
+            .top_b{
+              margin 16px 0 18px 0
+              font-size:20px;
+              font-weight:bold;
+              color:rgba(34,34,34,1);
+            }
+            .top_c,.top_d {
+              font-size:14px
+              font-weight:400
+              line-height: 30px
+              color:rgba(102,102,102,1)
+            }
             .corner {
               width: 10px
               height: 10px
-              background-color: red
+              background-color #ffffff
               transform translateX(-50%) rotate(45deg)
               position absolute
-              bottom -5px
+              bottom -4px
               left 50%
             }
           }
@@ -460,7 +681,7 @@
               width: 23px
               height: 20px
               margin 0 auto
-              background-color #7e8c8d
+              background-color #f1f2f3
               border-radius 50%
               padding-top 3px
 
@@ -484,13 +705,20 @@
   }
 
   .scheme {
+    padding-top: 76px
     .scheme_title {
-      font-size: 40px
-      font-weight 500
+      width: 420px
+      height: 105px
+      margin 0 auto
+
+      img {
+        width: 420px
+        height: 105px
+      }
     }
 
     .scheme_wrap {
-      padding 20px 300px
+      padding 20px 520px
       display flex
 
       .scheme_lift {
@@ -554,54 +782,111 @@
 
   .join {
     background-color goldenrod
+    padding-top: 34px
+    padding-bottom: 20px
 
     .join_title {
-      font-size: 40px
-      font-weight 500
+      width: 493px
+      height: 86px
+      margin 0 auto
+
+      img {
+        width: 493px
+        height: 86px
+      }
     }
 
     .item_wrap {
-      width: 1400px
-      margin: 20px auto
+      padding 0 500px
+      text-align left
+      margin: 20px 0
 
       .item {
         width: 235px
         height: 200px
         display inline-block
         margin-right 10px
+        text-align center
 
         .item_top {
-          width: 235px
-          height: 125px
-          margin 20px 0
-          line-height 120px
-          border-radius 20px
+          width: 231px
+          height: 123px
+          margin 20px auto
+          line-height 123px
+          border-radius 5px
           color: #fe4716
-          background-color white
-          font-size: 60px
+          background-color rgba(255, 255, 255, 1)
+          font-size: 66px
+        }
+
+        .item_bottom {
+          font-size: 24px
+          color: #ffffff
+          font-weight 400
         }
       }
     }
   }
 
   .message {
+    padding-top 50px
+
     .message_title {
-      font-size: 40px
-      font-weight 500
+      width: 420px
+      height: 88px
+      margin 0 auto
+
+      img {
+        width: 420px
+        height: 88px
+      }
     }
 
     .message_wrap {
       width: 1800px
-      padding 50px 0
-      margin 0 auto
+      padding 50px 220px
 
       .message_item {
-        width: 380px
-        height: 500px
         display inline-block
-        margin-right 20px
-        background-color goldenrod
-        border-radius 10px
+        margin-right 30px
+
+        .item_img {
+          width: 380px
+          height: 234px
+          border-radius 8px
+          overflow hidden
+
+          img {
+            width: 380px
+            height: 234px
+          }
+        }
+
+        .text_wrap {
+          padding-bottom 20px
+          border-top 2px dashed #B8B8B8
+
+          .text_title {
+            display flex
+            justify-content: space-between
+            padding-top 30px
+            padding-bottom 13px
+            font-size: 20px
+            color: #333333
+            font-weight: bold
+          }
+
+          .text_bottom {
+            font-size: 18px
+            color: #666666
+            font-weight: 400
+            text-align left
+          }
+        }
+
+        .border0 {
+          border 0
+        }
       }
     }
   }
@@ -615,6 +900,7 @@
     }
 
     .demand_contact {
+      padding-left: 300px
       text-align left
 
       .contact {
@@ -665,9 +951,9 @@
         }
 
         .text_content {
-          width: 1098px
+          width: 1110px
           height: 215px
-          margin-left 80px
+          margin-left 110px
           border-radius 10px
           outline: none
           padding 5px
@@ -683,6 +969,7 @@
             width: 380px
             height: 60px
             padding 0 10px
+            margin-left: 10px
             margin-right 20px
             border 1px solid #7e8c8d
             border-radius 10px
